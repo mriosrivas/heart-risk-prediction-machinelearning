@@ -18,4 +18,18 @@ The process of developing a model consisted of many different parts some of whic
 
 6. [Model Usage Example](Model_Use.ipynb)
 
-This project sets the foundations for the deployment of this model in a Web Server using Flask. The following [Jupyter Notebook](link) describes how to do it.
+This project sets the foundations for deploying this model in a Web Server using Flask. The following [Jupyter Notebook](link) will describe how to do so.
+
+
+
+At the end of this project, it is a good idea to have a script that can train each or all models at once. The script called `train.py` serves for this purpose.
+
+
+
+You can do it by typing the following command to train all models at once.
+
+```bash
+python train.py --model all
+```
+
+If you want to train one model instead, you can set the `model` parameter as `logistic`, `random_forrest` or `xgboost`. When the training is done, you will have a series of `bin` files that includes the machine learning models and a `dict_vectorizer` which will be useful to transform our inputs into the desired format for our models.
